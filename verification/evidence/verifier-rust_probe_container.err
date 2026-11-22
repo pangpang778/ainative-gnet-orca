@@ -1,0 +1,3 @@
+   Compiling gnet-core v0.1.0 (/w/crates/gnet-core)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.43s
+     Running `target/debug/examples/ring_probe`
