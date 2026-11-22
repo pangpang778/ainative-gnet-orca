@@ -1,0 +1,33 @@
+   Compiling gnet-core v0.1.0 (/w/crates/gnet-core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.54s
+     Running unittests src/lib.rs (/tmp/rtarget2/debug/deps/gnet_core-834dacf8a58aadb2)
+
+running 6 tests
+test math::tests::ceil_to_power_of_two_returns_none_where_go_panics ... ok
+test math::tests::ceil_to_power_of_two_matches_go ... ok
+test math::tests::floor_to_power_of_two_matches_go ... ok
+test math::tests::power_of_two_detection_matches_go ... ok
+test math::tests::closest_power_of_two_matches_go ... ok
+test ring::tests::wrapped_buffer_invariants_hold ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/ring_buffer.rs (/tmp/rtarget2/debug/deps/ring_buffer-aa4a112e6a4c6c10)
+
+running 7 tests
+test test_ring_buffer_byte_interface ... ok
+test test_ring_buffer_grow ... ok
+test test_ring_buffer_read ... ok
+test test_ring_buffer_read_from ... ok
+test test_ring_buffer_write ... ok
+test test_zero_ring_buffer ... ok
+test test_ring_buffer_write_to ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests gnet_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

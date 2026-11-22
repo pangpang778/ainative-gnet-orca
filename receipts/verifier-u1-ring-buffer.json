@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "role": "verifier",
+  "job_id": "ainative-gnet/u1-ring-buffer",
+  "execution_id": "acc873adbb4443ab3",
+  "engineer_execution_id": "a9ac4e1ea2e046d5a",
+  "workspace": "C:\\Users\\Administrator\\.openmausbot\\task-workspaces\\a3c09148-95b0-4e24-b338-0c384bc8ffab\\8777e614-f35e-4946-a47b-91b2a21f20d3\\ainative-gnet",
+  "target_revision": "sha256:0731d91dbf8ad28b2e5df92976e1e3aa6d2e87b2eeb2f2478a55344eb77e74d8",
+  "revision_files": [
+    {
+      "path": ".audit/execution.tsv",
+      "sha256": "e75d6a82dfd13dc473590d6c56d56c22c6e679e2ba621b8fe66de9d1dff36797"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "eed7737a275e45cbef67dbc51c70879e21affd371ac819a4e1c4f76d224f2339"
+    },
+    {
+      "path": "crates/gnet-core/examples/ring_probe.rs",
+      "sha256": "0d16238b280b358e1e47f9d5487e326eabe30993095a8e2754d3cfae82733795"
+    },
+    {
+      "path": "crates/gnet-core/src/lib.rs",
+      "sha256": "07a1a451c7abb856a3093a6c98d6ebf4d1a7a0c9ac21484540506b7e02ebf944"
+    },
+    {
+      "path": "crates/gnet-core/src/math.rs",
+      "sha256": "14c9fc0666ccaf20c1e4680267650f847dbc955e784241b3a10a57344f2af526"
+    },
+    {
+      "path": "crates/gnet-core/src/ring.rs",
+      "sha256": "9eb56ada25668597c5ddbe491267f9e0c9ce1594ce3cf4cb04164d8682b8b911"
+    },
+    {
+      "path": "crates/gnet-core/tests/ring_buffer.rs",
+      "sha256": "52c37e8c2fc9c97ccd9e1ae0f2cd99b18293a6413dd28239d493c63ed052f80e"
+    },
+    {
+      "path": "reference/gnet-go/cmd/ringprobe/main.go",
+      "sha256": "581143b3fd59afcd81b9f7903418afad62a5ebd50708713e04add858bc16e0bd"
+    }
+  ],
+  "result": "PASS",
+  "checks": [
+    {
+      "command": "cargo fmt --all -- --check (verifier re-run)",
+      "exit_code": 0,
+      "log": "verification/evidence/verifier-fmt.log"
+    },
+    {
+      "command": "cargo clippy --workspace --all-targets -- -D warnings (verifier re-run)",
+      "exit_code": 0,
+      "log": "verification/evidence/verifier-clippy.log"
+    },
+    {
+      "command": "cargo test --workspace (verifier re-run)",
+      "exit_code": 0,
+      "log": "verification/evidence/verifier-test.log"
+    },
+    {
+      "command": "cargo doc --workspace --no-deps (verifier re-run)",
+      "exit_code": 0,
+      "log": "verification/evidence/verifier-doc.log"
+    },
+    {
+      "command": "diff verifier-go_probe.out verifier-rust_probe.out",
+      "exit_code": 0,
+      "log": "verification/evidence/verifier-probe.diff"
+    },
+    {
+      "command": "diff verifier-go_probe_container.out verifier-rust_probe_container.out",
+      "exit_code": 0,
+      "log": "verification/evidence/verifier-probe_container.diff"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "crates/gnet-core/src/lib.rs",
+      "sha256": "07a1a451c7abb856a3093a6c98d6ebf4d1a7a0c9ac21484540506b7e02ebf944"
+    },
+    {
+      "path": "crates/gnet-core/src/math.rs",
+      "sha256": "14c9fc0666ccaf20c1e4680267650f847dbc955e784241b3a10a57344f2af526"
+    },
+    {
+      "path": "crates/gnet-core/src/ring.rs",
+      "sha256": "9eb56ada25668597c5ddbe491267f9e0c9ce1594ce3cf4cb04164d8682b8b911"
+    },
+    {
+      "path": "crates/gnet-core/tests/ring_buffer.rs",
+      "sha256": "52c37e8c2fc9c97ccd9e1ae0f2cd99b18293a6413dd28239d493c63ed052f80e"
+    },
+    {
+      "path": "crates/gnet-core/examples/ring_probe.rs",
+      "sha256": "0d16238b280b358e1e47f9d5487e326eabe30993095a8e2754d3cfae82733795"
+    },
+    {
+      "path": "reference/gnet-go/cmd/ringprobe/main.go",
+      "sha256": "581143b3fd59afcd81b9f7903418afad62a5ebd50708713e04add858bc16e0bd"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "eed7737a275e45cbef67dbc51c70879e21affd371ac819a4e1c4f76d224f2339"
+    },
+    {
+      "path": "verification/evidence/verifier-fmt.log",
+      "sha256": "a40ec854ef8fdc0748d2b20c674c3528e75e6901bdc45b98f7f1f0260c289ae0"
+    },
+    {
+      "path": "verification/evidence/verifier-clippy.log",
+      "sha256": "99f71393b9903dca098310bb446022a4bdee195ea9996f351a787195555210a6"
+    },
+    {
+      "path": "verification/evidence/verifier-test.log",
+      "sha256": "fef98555452461dfde036ef9f7577f01ea9c066c33c30596268d872675548eab"
+    },
+    {
+      "path": "verification/evidence/verifier-doc.log",
+      "sha256": "299628620c630442e6a49410ea48b6ad8da53ecdeec54c3a587b36b0be1fb817"
+    },
+    {
+      "path": "verification/evidence/verifier-probe.diff",
+      "sha256": "84984bd8da29e18e9472711b26034cbcdd1bcdd901919754c0b894fcf07f3408"
+    },
+    {
+      "path": "verification/evidence/verifier-probe_container.diff",
+      "sha256": "e46baf8383ed7758c28ed7d66e541cbbd7e18f0b5af6b63bf6d1abdaddc2bf1c"
+    },
+    {
+      "path": "verification/evidence/verifier-go_probe.out",
+      "sha256": "1a40eb8f0d560e13a41c907bed9490fffdf0f5c49161797ea8c035a6518a83c9"
+    },
+    {
+      "path": "verification/evidence/verifier-rust_probe.out",
+      "sha256": "1a40eb8f0d560e13a41c907bed9490fffdf0f5c49161797ea8c035a6518a83c9"
+    },
+    {
+      "path": "verification/evidence/verifier-go_probe_container.out",
+      "sha256": "1a40eb8f0d560e13a41c907bed9490fffdf0f5c49161797ea8c035a6518a83c9"
+    },
+    {
+      "path": "verification/evidence/verifier-rust_probe_container.out",
+      "sha256": "1a40eb8f0d560e13a41c907bed9490fffdf0f5c49161797ea8c035a6518a83c9"
+    }
+  ]
+}

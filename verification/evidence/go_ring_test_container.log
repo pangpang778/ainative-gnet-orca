@@ -1,0 +1,5 @@
+go: downloading github.com/stretchr/testify v1.11.1
+# github.com/panjf2000/gnet/v2/pkg/buffer/ring
+pkg/buffer/ring/ring_buffer_test.go:9:2: github.com/stretchr/testify@v1.11.1: Get "https://proxy.golang.org/github.com/stretchr/testify/@v/v1.11.1.zip": net/http: TLS handshake timeout
+FAIL	github.com/panjf2000/gnet/v2/pkg/buffer/ring [setup failed]
+FAIL
